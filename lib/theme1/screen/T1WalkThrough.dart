@@ -26,6 +26,11 @@ class T1WalkThrough extends StatelessWidget {
         content:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
         imageIcon: t1_walk3),
+    Walkthrough(
+        title: "Get Prizes",
+        content:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+        imageIcon: t1_walk3),
   ];
 
   @override
