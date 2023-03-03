@@ -70,10 +70,10 @@ class T1DashboardState extends State<T1Dashboard> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                mediaButton("NSTW", t1_file),
+                                mediaButton("GetStarted", t1_file),
                                 mediaButton("SciQuest", t1_video),
-                                mediaButton("Videos", t1_images),
-                                mediaButton("Contact", t1_images),
+                                mediaButton("Games", t1_images),
+                                mediaButton("About", t1_images),
                               ],
                             ),
                           ),
