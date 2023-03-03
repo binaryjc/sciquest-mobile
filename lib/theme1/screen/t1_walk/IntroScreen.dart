@@ -62,7 +62,7 @@ class IntroScreenState extends State<IntroScreen> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   DotsIndicator(
-                    dotsCount: 3,
+                    dotsCount: 4,
                     position: currentPage,
                     decorator: DotsDecorator(
                         size: const Size.square(5.0),
@@ -79,7 +79,7 @@ class IntroScreenState extends State<IntroScreen> {
                           style: TextStyle(
                               color: t1_white, fontSize: textSizeSmall)),
                       onTap: () {
-                        Navigator.pushNamed(context, '/dashboard');
+                        Navigator.pushNamed(context, '/signup');
                       },
                     ),
                     padding: EdgeInsets.all(24),
