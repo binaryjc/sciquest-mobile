@@ -4,6 +4,9 @@ import 'package:nb_utils/nb_utils.dart';
 import 'package:sciquest_mobile/main/store/AppStore.dart';
 import 'package:sciquest_mobile/main/utils/AppTheme.dart';
 import 'package:sciquest_mobile/theme1/screen/T1Dashboard.dart';
+import 'package:sciquest_mobile/theme1/screen/T1ImageSlider.dart';
+import 'package:sciquest_mobile/theme1/screen/T1Login.dart';
+import 'package:sciquest_mobile/theme1/screen/T1Profile.dart';
 import 'package:sciquest_mobile/theme1/screen/T1Signup.dart';
 import 'package:sciquest_mobile/theme1/screen/T1WalkThrough.dart';
 import 'package:sciquest_mobile/theme1/screen/t1_walk/IntroScreen.dart';
@@ -31,7 +34,8 @@ class MyApp extends StatelessWidget {
           navigatorKey: navigatorKey,
           scrollBehavior: SBehavior(),
           routes: <String, WidgetBuilder>{
-            '/dashboard': (BuildContext context) => T1Dashboard(),
+            '/dashboard': (BuildContext context) => T1WalkThrough(),
+            '/signup': (BuildContext context) => T1Signup(),
           }),
     );
   }
