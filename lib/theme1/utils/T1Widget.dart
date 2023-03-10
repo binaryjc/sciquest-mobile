@@ -35,6 +35,41 @@ Padding editTextStyle(var hintText,
   );
 }
 
+Padding editTextStyleValidatorOnchanged(var hintText,
+    {isPassword = true, TextEditingController? controller}) {
+  return Padding(
+    padding: EdgeInsets.fromLTRB(40, 0, 40, 0),
+    child: TextFormField(
+        style:
+            TextStyle(fontSize: textSizeLargeMedium, fontFamily: fontRegular),
+        obscureText: isPassword,
+        controller: controller,
+        decoration: InputDecoration(
+          contentPadding: EdgeInsets.fromLTRB(24, 18, 24, 18),
+          hintText: hintText,
+          filled: true,
+          fillColor: appStore.isDarkModeOn ? cardDarkColor : white,
+          enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(40),
+              borderSide:
+                  const BorderSide(color: t1_edit_text_background, width: 0.0)),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(40),
+            borderSide:
+                const BorderSide(color: t1_edit_text_background, width: 0.0),
+          ),
+        ),
+        validator: (value) {
+          if (value!.isEmpty) {
+            return 'Please enter a $hintText';
+          } else {
+            return null;
+          }
+        },
+        onChanged: (value) {}),
+  );
+}
+
 // EditText
 Padding editTextCard(var hintText) {
   return Padding(
@@ -98,6 +133,21 @@ Widget shadowButton(String name) {
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
     color: t1_colorPrimary,
     onPressed: () => {},
+  );
+}
+
+Widget shadowButtonWithAction(String name, btnaction) {
+  return MaterialButton(
+    height: 60,
+    minWidth: double.infinity,
+    child: text(name,
+        fontSize: textSizeLargeMedium,
+        textColor: t1_white,
+        fontFamily: fontMedium),
+    textColor: t1_white,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40.0)),
+    color: t1_colorPrimary,
+    onPressed: btnaction,
   );
 }
 
