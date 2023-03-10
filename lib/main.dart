@@ -10,6 +10,7 @@ import 'package:sciquest_mobile/theme1/screen/T1Profile.dart';
 import 'package:sciquest_mobile/theme1/screen/T1Signup.dart';
 import 'package:sciquest_mobile/theme1/screen/T1WalkThrough.dart';
 import 'package:sciquest_mobile/theme1/screen/t1_walk/IntroScreen.dart';
+import 'package:sciquest_mobile/main/screen/SignupTest.dart';
 
 import 'main/utils/AppConstant.dart';
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       builder: (_) => MaterialApp(
           debugShowCheckedModeBanner: false,
           title: '$mainAppName${!isMobile ? ' ${platformName()}' : ''}',
-          home: T1WalkThrough(),
+          home: SignupTest(),
           theme: !appStore.isDarkModeOn
               ? AppThemeData.lightTheme
               : AppThemeData.darkTheme,
