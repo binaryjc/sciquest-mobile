@@ -30,6 +30,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  localstorage: ^4.0.0+1
+  connectivity_plus: ^3.0.2
+  shared_preferences:
+  
   #Base
   nb_utils: ^4.6.21
   intl: ^0.17.0
